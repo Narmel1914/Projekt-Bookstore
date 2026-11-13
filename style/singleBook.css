@@ -1,0 +1,14 @@
+.book-liked {
+  border: none;
+}
+
+a {
+  display: flex;
+  background-color: rgb(231, 10, 10);
+}
+
+img {
+  width: 32px;
+  height: 32px;
+  color: rgb(231, 10, 10);
+}

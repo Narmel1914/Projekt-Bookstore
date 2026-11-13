@@ -26,8 +26,11 @@
 
     <title>Document</title>
     <script src="../Row-data/db.js" defer></script>
+    <script src="../script/template.js" defer></script>
+    <script src="../script/script.js" defer></script>
 
     <link rel="stylesheet" href="../style/mainBookstore.css" />
+    <link rel="stylesheet" href="../style/singleBook.css" />
 
     <!-- <link rel="icon" type="Icons/Group.png" href="icons/Group.png" />  important-->
   </head>
@@ -46,23 +49,46 @@
     <main>
       <section class="main-bookstore">
         <div class="card-book">
-          <div id="card-book-name" class="name-book">book name</div>
+          <div class="name-book">
+            <h2 id="card-book-name"></h2>
+          </div>
           <hr />
           <div id="card-book-img" class="img-book">image book hier</div>
           <hr />
           <div class="card-book-property">
             <div class="card-price-likes-counter">
-              <div id="card-book-price">price</div>
+              <div class="book-price">
+                <p id="card-book-price"></p>
+              </div>
               <div class="card-likes-counter">
-                <div id="card-bok-likes">nber</div>
-                <div id="card-book-liked">liked</div>
+                <div class="book-likes">
+                  <p id="card-book-likes"></p>
+                </div>
+                <div class="book-liked">
+                  <a>
+                    <img
+                      src="../assets/icons/liked.png"
+                      alt="liked"
+                      id="card-book-liked"
+                      onclick="UpCounter_DownCounter()"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="card-book-reference">
-              <div id="card-book-author">author</div>
-              <div id="card-book-publishedYear">jahr</div>
-              <div id="card-book-genre">Genre</div>
+              <div class="book-author">
+                <p id="card-book-author"></p>
+              </div>
+
+              <div class="book-publishedYear">
+                <p id="card-book-publishedYear"></p>
+              </div>
+
+              <div class="book-genre">
+                <p id="card-book-genre"></p>
+              </div>
             </div>
           </div>
           <hr />
