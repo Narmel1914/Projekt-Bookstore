@@ -16,9 +16,6 @@ function getSingleBook(Objects, param) {
 }
 
 
-//console.log('info Objects:', allInfoBook[0], allInfoBook[1],
-//    allInfoBook[2], allInfoBook[3], allInfoBook[4], allInfoBook[5], allInfoBook[6]
-//);
 
 
 //console.log('first book length:', allInfoBook.length);
@@ -40,7 +37,7 @@ function renderSingleBook(index) {
             break;
         case 3:
             let bookLikedRef = document.getElementById("card-book-liked");
-            bookLikedRef.innerHTML = getBookLikedTemplate(index);
+            //bookLikedRef.innerHTML = getBookLikedTemplate(index);
             break;
         case 4:
             let priceBookRef = document.getElementById("card-book-price");
@@ -59,9 +56,47 @@ function renderSingleBook(index) {
 
 }
 
+/* get single book template und the rest*/
 let allInfoBook = getSingleBook(books, 0);
+
+
+//console.log('info Objects:', allInfoBook[0], allInfoBook[1],
+//    allInfoBook[2], allInfoBook[3], allInfoBook[4], allInfoBook[5], allInfoBook[6]
+//);
 
 for (let index = 0; index < books.length; index++) {
     renderSingleBook(index);
 
 }
+/* UpCounter_DownCounter */
+const likes = document.getElementById('card-book-likes');
+const heart = document.getElementById('heart-button');
+heart.addEventListener("click", UpCounter_DownCounter);
+
+let item = {
+    count: allInfoBook[2],
+    selected: allInfoBook[3]
+};
+
+console.log("item:", item)
+
+//&& heart.classList.contains("is-liked")
+function UpCounter_DownCounter() {
+    heart.classList.toggle("is-liked");
+    //  && heart.classList.contains("is-liked")
+    if ((item.selected == true) && heart.classList.contains("is-liked")) {
+        item.count += item.selected;
+        likes.textContent = item.count // `<p>${item.count + 1}</p>`;
+        heart.classList.replace("bi-heart", "bi-heart-fill");
+    }
+    else {
+
+        item.count -= 1;
+        //console.log('counter:', counter);
+        likes.textContent = item.count;//`<p>${getBookLikesTemplate(index) + counter}</p>`;
+        heart.classList.replace("bi-heart-fill", "bi-heart");
+    }
+
+}
+
+//UpCounter_DownCounter();

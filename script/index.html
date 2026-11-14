@@ -23,6 +23,10 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+    />
 
     <title>Document</title>
     <script src="../Row-data/db.js" defer></script>
@@ -57,7 +61,7 @@
           <hr />
           <div class="card-book-property">
             <div class="card-price-likes-counter">
-              <div class="book-price">
+              <div class="book-price text-danger">
                 <p id="card-book-price"></p>
               </div>
               <div class="card-likes-counter">
@@ -65,14 +69,16 @@
                   <p id="card-book-likes"></p>
                 </div>
                 <div class="book-liked">
-                  <a>
-                    <img
-                      src="../assets/icons/liked.png"
-                      alt="liked"
-                      id="card-book-liked"
-                      onclick="UpCounter_DownCounter()"
-                    />
-                  </a>
+                  <div class="is-liked">
+                    <i
+                      class="bi bi-heart-fill text-danger"
+                      id="heart-button"
+                      role="button"
+                      aria-label="Ajouter aux favoris"
+                      <!--onclick="UpCounter_DownCounter()"-->
+                    </i>
+                  </div>
+               
                 </div>
               </div>
             </div>
@@ -109,7 +115,14 @@
               <input type="text" id="get-comment" />
             </div>
             <div class="card-icon-commnent">
-              <button id="send-comment"></button>
+              <a href="https://icons.getbootstrap.com/icons/send/"></a>
+              <!--<button
+                type="button"
+                id="send-comment"
+                class="btn btn-default btn-sm"
+              >
+                <span class="glyphicon glyphicon-send"></span> Send
+              </button>-->
             </div>
           </div>
         </div>

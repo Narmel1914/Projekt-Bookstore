@@ -1,14 +1,83 @@
+.card-price-likes-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card-price-likes-counter > p {
+  margin: 0;
+}
 .book-liked {
   border: none;
 }
 
 a {
   display: flex;
-  background-color: rgb(231, 10, 10);
+  /*background-color: rgb(231, 10, 10);*/
 }
 
-img {
-  width: 32px;
-  height: 32px;
+.card-likes-counter > p {
+  margin: 0;
+}
+
+.bi::before,
+[class*=" bi-"]::before,
+[class^="bi-"]::before {
+  display: flex;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#heart-button {
+  color: rgb(235, 221, 221);
+  font-size: 32px;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+#heart-button:hover {
+  color: rgb(241, 5, 5);
+  transform: scale(1.15);
+}
+
+#heart-button.is-liked {
+  color: red;
+}
+
+.bi-heart-fill {
+  color: red;
+  font-size: 3rem;
+}
+
+.text-danger {
+  color: red;
+}
+
+#card-book-price {
   color: rgb(231, 10, 10);
+  font-family: "Palanquin", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+.card-likes-counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  gap: 10px;
+}
+
+p {
+  margin-top: 0;
 }
