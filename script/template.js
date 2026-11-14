@@ -10,12 +10,12 @@ function getAuthorBookTemplate(index) {
 
 
 function getBookLikesTemplate(index) {
-    return `<p>  ${allInfoBook[index]}</p>
+    return `<p>${allInfoBook[index]}</p>
     `;
 }
 
 function getBookLikedTemplate(index) {
-    return `<p> ${allInfoBook[index]}</p>
+    return `<p>${allInfoBook[index]}</p>
     `;
 }
 function getBookPriceTemplate(index) {

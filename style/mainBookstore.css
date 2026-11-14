@@ -46,8 +46,8 @@ span {
 }
 hr {
   color: white;
-
   border: 2px solid #06a7ec;
+  margin: 0px;
 }
 main {
   height: 100vh;
@@ -89,20 +89,14 @@ main {
 .card-book-property {
   display: flex;
   flex-direction: column;
-  margin: 16px;
+  margin: 0 16px;
 }
 .card-price-likes-counter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.card-likes-counter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: space-between;
-  gap: 10px;
-}
+
 .card-receveid-comment {
   display: flex;
   flex-direction: column;

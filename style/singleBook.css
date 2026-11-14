@@ -22,7 +22,7 @@ a {
 .bi::before,
 [class*=" bi-"]::before,
 [class^="bi-"]::before {
-  display: flex;
+  display: inline-block;
   font-family: bootstrap-icons !important;
   font-style: normal;
   font-weight: 400 !important;
