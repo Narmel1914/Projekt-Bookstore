@@ -57,7 +57,7 @@ function renderSingleBook(index) {
 }
 
 /* get single book template und the rest*/
-let allInfoBook = getSingleBook(books, 0);
+let allInfoBook = getSingleBook(books, 1);
 
 
 //console.log('info Objects:', allInfoBook[0], allInfoBook[1],
