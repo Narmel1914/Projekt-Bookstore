@@ -1,0 +1,28 @@
+.input-comment {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #06171e;
+}
+.input-text {
+  background-color: #06171e;
+  border-right: none;
+  color: white;
+  font-family: "Palanquin", sans-serif;
+}
+
+.progress {
+  display: flex;
+  width: 2%;
+  height: 20vh;
+  overflow: hidden;
+  line-height: 0;
+  font-size: 0.75rem;
+  background-color: #06171e;
+  color: #05eaf1;
+  border-radius: 0.25rem;
+}
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  background-color: #09212a;
+  border: none;
+}

@@ -2,17 +2,13 @@ const commentInput = document.getElementById("get-comment");
 const btnSend = document.getElementById("btn_send");
 const commentBox = document.getElementById("comment-box");
 
-function sendComment() {
-    const text = commentInput.value.trim();
+function sendComment(index) {
+    const input = document.getElementById("get-comment-" + index);
+    const text = input.value.trim();
     if (text === "") return;
 
-    const div = document.createElement("div");
-    div.className = "alert alert-secondary py-2 mb-2";
-    div.textContent = text;
-    commentBox.appendChild(div);
-
-    commentInput.value = "";
-    commentInput.focus();
+    books[index].comments.push({ name: "Anonym", comment: text });
+    input.value = "";
 }
 
 btnSend.addEventListener("click", sendComment);
