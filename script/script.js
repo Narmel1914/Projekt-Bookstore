@@ -34,7 +34,8 @@ function toggleLike(index) {
 
     counter.innerHTML = `<h3 id="card-book-likes-${index}">${books[index].likes}</h3>`
         ;
-    //localStorage.setItem("toggleLike", JSON.stringify(toggleLike(index)));
+    localStorage.setItem("counter", JSON.stringify(counter));
+    localStorage.setItem("likes", JSON.stringify(heart));
 }
 
 
