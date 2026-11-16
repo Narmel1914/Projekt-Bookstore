@@ -30,6 +30,7 @@
 
     <title>Document</title>
     <script src="../Row-data/db.js" defer></script>
+    <script src="../script/card-book-template.js" defer></script>
     <script src="../script/template.js" defer></script>
     <script src="../script/script.js" defer></script>
 
@@ -51,79 +52,9 @@
       </div>
     </header>
     <main>
-      <section class="main-bookstore">
-        <div class="card-book">
-          <div class="name-book">
-            <h2 id="card-book-name"></h2>
-          </div>
-          <hr />
-          <div id="card-book-img" class="img-book">image book hier</div>
-          <hr />
-          <div class="card-book-property">
-            <div class="card-price-likes-counter">
-              <div class="book-price text-danger">
-                <p id="card-book-price"></p>
-              </div>
-              <div class="card-likes-counter">
-                <div class="book-likes">
-                  <p id="card-book-likes"></p>
-                </div>
-                <div class="book-liked">
-                  <div class="is-liked">
-                    <i
-                      class="bi bi-heart-fill text-danger"
-                      id="heart-button"
-                      role="button"
-                      <!--onclick="UpCounter_DownCounter()"-->
-                    </i>
-                  </div>
-               
-                </div>
-              </div>
-            </div>
-
-            <div class="card-book-reference">
-              <div class="book-author">
-                <p id="card-book-author"></p>
-              </div>
-
-              <div class="book-publishedYear">
-                <p id="card-book-publishedYear"></p>
-              </div>
-
-              <div class="book-genre">
-                <p id="card-book-genre"></p>
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div class="card-receveid-comment">
-            <div class="title-comment">Kommentare</div>
-            <div class="card-book-all-comment">
-              <div class="card-book-id-comment">
-                <div id="book-comment-name">name-cter</div>
-                <div id="book-comment">comment</div>
-              </div>
-
-              <div class="scroll-bar">scroll bar see</div>
-            </div>
-          </div>
-          <hr />
-          <div class="card-book-send-comment">
-            <div class="card-get-comment">
-              <input type="text" id="get-comment" />
-            </div>
-            <div class="card-icon-commnent">
-              <a href="https://icons.getbootstrap.com/icons/send/"></a>
-              <!--<button
-                type="button"
-                id="send-comment"
-                class="btn btn-default btn-sm"
-              >
-                <span class="glyphicon glyphicon-send"></span> Send
-              </button>-->
-            </div>
-          </div>
+      <section class="main-store">
+        <div id="bookstore">
+          <div class="card-book"></div>
         </div>
       </section>
     </main>

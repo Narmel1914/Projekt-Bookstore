@@ -3,12 +3,17 @@
 
 * {
   margin: 0;
-
   box-sizing: border-box;
 }
 
+html,
 body {
+  min-height: 100vh;
   width: 100%;
+}
+body {
+  min-height: 100vh;
+  background: #06171e;
 }
 
 header {
@@ -24,6 +29,11 @@ header {
   align-items: center;
   gap: 2px;
 }
+
+.h2,
+h2 {
+  font-size: 2rem;
+}
 span {
   color: rgba(255, 0, 0, 0.651);
 }
@@ -35,7 +45,7 @@ span {
 .book-store-header > h3 {
   color: white;
   font-family: "Palanquin", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 24px;
 }
 
@@ -45,8 +55,7 @@ span {
   border-radius: 100%;
 }
 hr {
-  color: white;
-  border: 2px solid #06a7ec;
+  border: 1px solid #05eaf1;
   margin: 0px;
 }
 main {
@@ -57,56 +66,83 @@ main {
   align-content: center;
   justify-content: center;
 }
-.main-bookstore {
+.main-store {
   padding: 16px max(0px, calc(50% - 720px));
   margin: 16px max(0px, calc(50% - 720px));
   display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  /*background-color: var(--color-bg);*/
+  width: 100%;
+  border-radius: 25px;
 }
-
+#bookstore {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
 .card-book {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   justify-items: center;
   justify-self: center;
-  height: calc(100vh - 300px);
-  width: 300px;
+  height: 100%;
+  width: auto;
   background-color: #09212a;
   color: white;
-  border-radius: 25px;
+  border-radius: 20px;
+  gap: 45px;
 }
 .name-book {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin: 16px;
+  align-items: center;
+  justify-items: center;
+
+  margin: 0 16px;
 }
 .img-book {
-  margin: 16px;
   display: flex;
   justify-content: center;
+  margin: 0 16px;
+  background-color: rgba(6, 23, 30, 0.5);
+  border-radius: 25px;
+}
+img {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 30px;
+  opacity: 0.8;
 }
 .card-book-property {
   display: flex;
   flex-direction: column;
-  margin: 0 16px;
+  /*margin: 0 16px;*/
 }
 .card-price-likes-counter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-content: space-between;
+  margin: 0 16px;
+}
+.card-book-reference {
+  margin: 0 16px;
 }
 
 .card-receveid-comment {
   display: flex;
   flex-direction: column;
-  margin: 16px;
+  margin: 0 16px;
 }
 .card-book-all-comment {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
 }
 
 .card-book-send-comment {
@@ -114,6 +150,17 @@ main {
   flex-direction: row;
   justify-content: space-between;
 }
-.card-book-send-comment {
-  margin: 16px;
+.card-get-comment {
+  display: flex;
+  margin-bottom: 20px;
+}
+.card-icon-commnent {
+  display: flex;
+  background-color: aqua;
+}
+.h4 .h3 {
+  font-size: 1rem;
+}
+.h3 {
+  font-size: 1rem;
 }
