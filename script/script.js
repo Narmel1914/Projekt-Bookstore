@@ -12,29 +12,29 @@ function renderAllBook() {
 
 }
 
-
 function toggleLike(index) {
 
-    const heart = document.getElementById("heart-liked-" + index);
-    const counter = document.getElementById("card-book-likes-" + index);
+    let heart = document.getElementById("heart-liked-" + index);
+    let counter = document.getElementById("card-book-likes-" + index);
 
-    //heart.classList.replace("bi-heart", "bi-heart-fill");
-    heart.classList.replace("bi-heart-fill", "bi-heart");
+    //heart.classList.contains("is-liked")
 
-    if ((books[index].liked == true) || heart.classList.contains("is-liked")) {
+    if ((!books[index].liked == true)) {
         books[index].liked = true;
-        books[index].likes -= 1;
-        heart.classList.replace("bi-heart-fill", "bi-heart");
+        books[index].likes += 1;
+        heart.classList.replace("bi-heart", "bi-heart-fill");
 
 
     } else {
         books[index].liked = false;
-        books[index].likes += 1;
-        heart.classList.replace("bi-heart", "bi-heart-fill");
+        books[index].likes -= 1;
+        heart.classList.replace("bi-heart-fill", "bi-heart");
 
     }
 
     counter.innerHTML = `<h3 id="card-book-likes-${index}">${books[index].likes}</h3>`
         ;
-
+    //localStorage.setItem("toggleLike", JSON.stringify(toggleLike(index)));
 }
+
+
