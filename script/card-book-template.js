@@ -1,9 +1,9 @@
 function buildCard(obj, index) {
     // build all comments of this book
-    let commentsHtml = "";
+
     let singleComment = "";
     if (obj.comments && obj.comments.length > 0) {
-        singleComment = obj.comments[0];
+        singleComment = obj.comments[index];
         commentsHtml = `<div class="card-book-comments">
         <h5>${singleComment.name}: ${singleComment.comment}</h5>
     </div>`;
@@ -28,7 +28,7 @@ function buildCard(obj, index) {
                     </div>
                     <div class="book-liked">
                         <div class="is-liked">
-                            <i id="heart-liked-${index}" class="bi bi-heart text-danger" onclick="toggleLike(${index})"></i>
+                            <i id="heart-liked-${index}" class="bi  bi-heart-fill text-danger" onclick="toggleLike(${index})"></i>
                             
                         </div>
                     </div>
@@ -40,15 +40,15 @@ function buildCard(obj, index) {
                         <thead>
                             <tr>
                                 <th class="book-author">Author</th>
-                                <td id="card-book-author">:${obj.author}</td>
+                                <td id="card-book-author">      :       ${obj.author}</td>
                             </tr>
                             <tr>
                                 <th class="book-publishedYear">Erscheinungsjahr</th>
-                                 <td id ="book-publishedYear">:${obj.publishedYear}</td>
+                                 <td id ="book-publishedYear">      :       ${obj.publishedYear}</td>
                             </tr>
                             <tr>
                                 <th class="book-genre">Genre:</th>
-                                <td id="card-book-genre">:${obj.genre}</td>
+                                <td id="card-book-genre">       :       ${obj.genre}</td>
                             </tr>
                         </thead>
                     </table>

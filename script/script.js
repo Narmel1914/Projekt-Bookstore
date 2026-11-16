@@ -1,6 +1,4 @@
-// get data from db.js
 
-//console.log('Objects', books);
 /*
 function init() {
     renderAllBook();
@@ -12,9 +10,6 @@ function renderAllBook() {
 
 */
 
-
-
-
 // Read every card book For exampel 3 
 let bookListRef = document.getElementById("bookstore");
 bookListRef.innerHTML = "";
@@ -24,19 +19,7 @@ for (let i = 0; i < 3; i++) {
 
 
 
-//&& heart.classList.contains("is-liked")
 
-//const likes = document.getElementById('card-book-likes');
-//const heart = document.getElementById('heart-button');
-//heart.addEventListener("click", toggleLike);
-/*let item = {
-    count: books[0].likes,
-    selected: books[0].liked
-};
-
-console.log("item count:", item.count)
-console.log("item selected:", item.selected)
-*/
 
 
 function toggleLike(index) {
@@ -48,17 +31,13 @@ function toggleLike(index) {
         selected: books[index].liked
     };
 
-    //&& heart.classList.contains("is-liked")
-    heart.classList.replace("bi-heart-fill", "bi-heart");;
-    if ((!item.selected === false)) {
+    if ((item.selected === true) && heart.classList.contains("is-liked")) {
         item.selected = true;
         item.count += 1;
         //heart.classList.replace("bi-heart-fill", "bi-heart");
         heart.classList.replace("bi-heart", "bi-heart-fill");
 
-
     } else {
-
         item.selected = false;
         item.count -= 1;
         //heart.classList.replace("bi-heart", "bi-heart-fill");
