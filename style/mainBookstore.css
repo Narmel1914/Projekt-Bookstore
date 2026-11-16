@@ -72,8 +72,8 @@ main {
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
-  /*background-color: var(--color-bg);*/
-  width: 100%;
+  /*background-color: var(--color-bg);
+  width: 100%;*/
   border-radius: 25px;
 }
 #bookstore {
