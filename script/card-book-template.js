@@ -1,6 +1,7 @@
 function buildCard(obj, index) {
     // build all comments of this book
 
+    let commentsHtml = "";
     let singleComment = "";
     if (obj.comments && obj.comments.length > 0) {
         singleComment = obj.comments[index];
@@ -36,7 +37,7 @@ function buildCard(obj, index) {
               </div>
 
               <div class="card-book-reference">
-                    <table>
+                    <table class="card-book-table">
                         <thead>
                             <tr>
                                 <th class="book-author">Author</th>
@@ -58,8 +59,16 @@ function buildCard(obj, index) {
                 <h5 class="title-comment">Kommentare</h5>
                 <div class="card-book-all-comment">
                     <div class="card-book-id-comment">
-                        <h6> name: ${singleComment.name}: </h6>
-                        <h6> comment: ${singleComment.comment}</h6>   
+                        <table  class="card-comment">
+                            <thead>
+                                <tr>
+                                    <th id="name-commenter">[${singleComment.name}]</th>
+                                    <td id="comment">:${singleComment.comment}</td>
+                                </tr>
+                              
+                            </thead>
+                        </table>
+                    
                     </div>
                     <div class="scroll-bar">scroll bar see</div>
                 </div>
