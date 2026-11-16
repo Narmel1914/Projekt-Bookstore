@@ -1,6 +1,7 @@
 
 
 function init() {
+
     renderAllBook();
 }
 function renderAllBook() {
@@ -38,4 +39,48 @@ function toggleLike(index) {
     localStorage.setItem("likes", JSON.stringify(heart));
 }
 
+/*
+function getUserNameComment(obj, index) {
+    let nameComment = document.getElementById('name-comment');
+    nameComment.innerHTML = ``;
+    nameComment.innerHTML += `
+    [${obj[index].obj["comments"].obj["name"]}]
+       `;
+}
+
+
+function getUserComment(obj, index) {
+
+    let getSingleComment = document.getElementById('comment');
+    getSingleComment.innerHTML = "";
+
+    getSingleComment.innerHTML += `
+      
+    ${obj[index].obj["comments"].obj["comment"]}
+
+    `;
+${commentOfUserTemplate(obj, index)}
+}*/
+
+function getUserNameComment() {
+    let nameComment = document.getElementById("name-comment");
+    nameComment.innerHTML = ``;
+    for (let index = 0; index < books.length; index++) {
+        nameComment.innerHTML += books.comments.name;
+
+
+    }
+}
+
+
+function getUserComment() {
+
+
+    let getSingleComment = document.getElementById('comment');
+
+    for (let index = 0; index < books.comments.length; index++) {
+        getSingleComment.innerHTML += `${books.comments.comment}`;
+
+    }
+}
 

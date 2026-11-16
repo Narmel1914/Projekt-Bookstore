@@ -1,15 +1,20 @@
-function buildCard(obj, index) {
-    // build all comments of this book
 
-    /*let commentsHtml = "";
-    let singleComment = "";
-    if (obj.comments && obj.comments.length > 0) {
-        singleComment = obj.comments[index];
-        commentsHtml = `<div class="card-book-comments">
-        <h5>${singleComment.name}: ${singleComment.comment}</h5>
-    </div>`;
-    
-}*/
+function commentOfUserTemplate(obj, index) {
+    // build comments from user
+    return `
+      <table id="card-comment">
+        <thead>
+            <tr>
+                <th id="name-comment">${obj.comments[index].name}</th>
+                <td id="comment">:${obj.comments[index].comment}</td>
+            </tr>      
+        </thead>
+     </table>
+    `;
+}
+//[${getUserNameComment(obj, index)}] ${getUserComment(obj, index)}
+
+function buildCard(obj, index) {
     return `
     <div class="card-book">
          <div class="name-book">
@@ -59,24 +64,38 @@ function buildCard(obj, index) {
                 <div class="card-receveid-comment">
                 <h5 class="title-comment">Kommentare</h5>
                 <div class="card-book-all-comment">
-                    <div class="card-book-id-comment">
-                            comment
+                    <div id="card-book-all-comment">
+                       
+                          <table  class="card-comment">
+                            <thead>
+                                <tr>
+                                    <th id="name-commenter">[${obj.comments[index]}]</th>
+                                    <td id="comment">:${obj.comments[index]}</td>
+                                </tr>
+                              
+                            </thead>
+                        </table>
+                       
                     </div>
-                    <div class="scroll-bar">scroll bar see</div>
+               
+                    <div class="scroll-bar">scrollbar </div>
                 </div>
               
-                <div class="card-book-send-comment">
-                    <div class="card-get-comment">
-                        <input type="text" id="get-comment" />
-                    </div>
-                    <div class="card-icon-commnent">
-                        <a href="https://icons.getbootstrap.com/icons/send/"></a>
-                    </div>
-                </div>  
+            <div class="card-book-send-comment">
+                <div class="input-group">
+                    <input type="text" id="get-comment" class="form-control"
+                        placeholder="Write comment" aria-label="Comments">
+                    <button id="btn_send" class="btn btn-primary" type="button" aria-label="Send">
+                    <i class="bi bi-send"></i>
+                    </button>
+                </div>
+            </div> 
           </div> 
     </div>`;
 }
 
 //buildCard(obj[0].comments[0].comment);
 //console.log(buildCard)
+
+
 
