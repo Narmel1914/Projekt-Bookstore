@@ -1,20 +1,30 @@
-
-function commentOfUserTemplate(obj, index) {
-    // build comments from user
-    return `
-      <table id="card-comment">
-        <thead>
-            <tr>
-                <th id="name-comment">${obj.comments[index].name}</th>
-                <td id="comment">:${obj.comments[index].comment}</td>
-            </tr>      
-        </thead>
-     </table>
-    `;
+function readAvalaibleComment(obj) {
+    if (obj.comments.length === 0) {
+        return `<p class="NOT-COMMENT">Noch keine Kommentare</p>`;
+    }
+    let rows = "";
+    for (let c = 0; c < obj.comments.length; c++) {
+        rows += `
+        <tr id="result-${c}">
+            <th>[${obj.comments[c].name}]</th>
+            <td>: ${obj.comments[c].comment}</td>
+        </tr>`;
+    }
+    return rows
 }
-//[${getUserNameComment(obj, index)}] ${getUserComment(obj, index)}
+
+
+function isComment(obj, index) {
+    return `
+    <table class="card-comment">
+        <tbody id="rowsColumn-${index}">${readAvalaibleComment(obj)}</tbody>
+    </table>`;
+}
+
+
 
 function buildCard(obj, index) {
+
     return `
     <div class="card-book">
          <div class="name-book">
@@ -64,48 +74,38 @@ function buildCard(obj, index) {
                 <div class="card-receveid-comment">
                     <h5 class="title-comment">Kommentare</h5>
                     <div class="card-book-all-comment">
-                        <div id="card-book-all-comment">
-                        
+                        <div class="card-book-all-comment" id="comments-${index}">
+                            <p id="demo"></p>
+                          
                             <table  class="card-comment">
-                                <thead>
-                                    <tr>
-                                        <th id="name-commenter">[${obj.comments[index]}]</th>
-                                        <td id="comment">:${obj.comments[index]}</td>
-                                    </tr>
-                                
-                                </thead>
+                             ${isComment(obj, index)}
                             </table>
-                        
                         </div>
                 
-                        <div class="progress">
+                        <div id="progress">
                                 <div class="progress-bar" id="progress-bar"role="progressbar"style="width: 0%">
                                     25%
                                 </div>
-                         </div>
+                        </div>
                         
                     </div>
               
                     <div class="card-book-send-comment">
-                        <div class="input-comment">
-                            <input type="text" id="get-comment-${index}" class="input-text" 
-                            placeholder="Schreibe dein Kommentar..." >
-                          
-                        </div>
-                      <div  class="send-button">
-                        <button id="btn_send" class="btn btn-primary" type="button" onclick="sendComment(${index})" aria-label="Send">
-                            <i class="bi bi-send"></i>
+                        <div class="input-group">
+                            <input type="text" id="get-comment-${index}" class="input-text " 
+                                placeholder="Schreibe dein Kommentar ..." >
+                            <button id="btn-send-${index}" class="btn btn-primary" type="button" onclick=" getTextFomInput(${index})">
+                                <i class="bi bi-send"></i>
                             </button>
-                            </div>
-                      </div>
+                        </div> 
                     </div> 
-                <div id="comment-box-${index}"></div>
+                    <div id="comment-box-${index}"></div>
+                </div>
             </div> 
         </div>`;
 }
 
-//buildCard(obj[0].comments[0].comment);
-//console.log(buildCard)
+
 
 
 

@@ -1,12 +1,29 @@
 
 
-function init() {
+let bookListRef = document.getElementById("bookstore");
+bookListRef.innerHTML = "";
 
+
+function init() {
+    initLikes();
     renderAllBook();
 }
+
+const originalLikes = [{ likes: 1, liked: false }];
+
+function initLikes() {
+    for (let i = 0; i < books.length; i++) {  // save the original value once
+        books[i].liked = false;
+        console.log(originalLikes[0].likes);
+        let heart = document.getElementById("heart-liked-" + i);
+        if ((books[i].liked == true)) {
+            heart.classList.replace("bi-heart", "bi-heart-fill");
+        }
+
+    }
+}
 function renderAllBook() {
-    let bookListRef = document.getElementById("bookstore");
-    bookListRef.innerHTML = "";
+
     for (let i = 0; i < books.length; i++) {
         bookListRef.innerHTML += buildCard(books[i], i);
     }
@@ -20,67 +37,25 @@ function toggleLike(index) {
 
     //heart.classList.contains("is-liked")
 
-    if ((!books[index].liked == true)) {
-        books[index].liked = true;
-        books[index].likes += 1;
-        heart.classList.replace("bi-heart", "bi-heart-fill");
-
-
-    } else {
+    heart.classList.replace("bi-heart-fill", "bi-heart");
+    if ((!books[index].liked === false)) {
         books[index].liked = false;
         books[index].likes -= 1;
+        //heart.classList.replace("bi-heart", "bi-heart-fill");
         heart.classList.replace("bi-heart-fill", "bi-heart");
 
+    } else {
+        books[index].liked = true;
+        books[index].likes += 1;
+        //heart.classList.replace("bi-heart-fill", "bi-heart");
+        heart.classList.replace("bi-heart", "bi-heart-fill");
     }
 
-    counter.innerHTML = `<h3 id="card-book-likes-${index}">${books[index].likes}</h3>`
+    //counter.innerHTML = `<h3 id="card-book-likes-${index}">${books[index].likes}</h3>`
+    counter.innerHTML = `${books[index].likes}`
         ;
-    localStorage.setItem("counter", JSON.stringify(counter));
-    localStorage.setItem("likes", JSON.stringify(heart));
-}
-
-/*
-function getUserNameComment(obj, index) {
-    let nameComment = document.getElementById('name-comment');
-    nameComment.innerHTML = ``;
-    nameComment.innerHTML += `
-    [${obj[index].obj["comments"].obj["name"]}]
-       `;
-}
-
-
-function getUserComment(obj, index) {
-
-    let getSingleComment = document.getElementById('comment');
-    getSingleComment.innerHTML = "";
-
-    getSingleComment.innerHTML += `
-      
-    ${obj[index].obj["comments"].obj["comment"]}
-
-    `;
-${commentOfUserTemplate(obj, index)}
-}*/
-
-function getUserNameComment() {
-    let nameComment = document.getElementById("name-comment");
-    nameComment.innerHTML = ``;
-    for (let index = 0; index < books.length; index++) {
-        nameComment.innerHTML += books.comments.name;
-
-
-    }
-}
-
-
-function getUserComment() {
-
-
-    let getSingleComment = document.getElementById('comment');
-
-    for (let index = 0; index < books.comments.length; index++) {
-        getSingleComment.innerHTML += `${books.comments.comment}`;
-
-    }
+    console.log("conter:", books[index].liked, counter);
+    localStorage.setItem("counter", JSON.stringify(document.getElementById("heart-liked-" + index)));
+    localStorage.setItem("likes", JSON.stringify(document.getElementById("card-book-likes-" + index)));
 }
 

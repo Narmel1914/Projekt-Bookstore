@@ -1,25 +1,29 @@
-.input-comment {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  background-color: #06171e;
+.input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .input-text {
   background-color: #06171e;
   border-right: none;
   color: white;
+  width: 80%;
   font-family: "Palanquin", sans-serif;
+  margin-top: 5px;
 }
 
-.progress {
+#progress {
   display: flex;
-  width: 2%;
-  height: 20vh;
-  overflow: hidden;
+  width: 1%;
+  height: 16vh;
   line-height: 0;
   font-size: 0.75rem;
   background-color: #06171e;
-  color: #05eaf1;
+
   border-radius: 0.25rem;
+}
+#progress-bar {
+  color: #05eaf1;
 }
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;

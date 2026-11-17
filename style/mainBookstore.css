@@ -37,6 +37,7 @@ h2 {
   display: flex;
   align-self: center;
   justify-self: center;
+  margin: 0 16px;
 }
 span {
   color: rgba(255, 0, 0, 0.651);
@@ -158,8 +159,6 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  gap: 10px;
 }
 
 .card-book-send-comment {
@@ -168,7 +167,7 @@ img {
   justify-content: space-between;
   /*background-color: #06171e;*/
 
-  transform: translateY(-30px);
+  transform: translateY(-5px);
 }
 
 .h4 {

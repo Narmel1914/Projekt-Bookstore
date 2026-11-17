@@ -1,18 +1,32 @@
-const commentInput = document.getElementById("get-comment");
-const btnSend = document.getElementById("btn_send");
-const commentBox = document.getElementById("comment-box");
+/*function addNewComment(obj, index) {
 
-function sendComment(index) {
-    const input = document.getElementById("get-comment-" + index);
-    const text = input.value.trim();
+    localStorage.setItem("books", JSON.stringify(books));
+}
+*/
+// save the author name once (only if it does not exist yet)
+const AUTHOR_KEY = "Author";
+function userNameCreate() {
+    if (localStorage.getItem(AUTHOR_KEY) === null) {
+        localStorage.setItem(AUTHOR_KEY, "Armel");
+    }
+}
+userNameCreate();
+function getTextFomInput(index) {
+
+    let textInput = document.getElementById("get-comment-" + index);
+    let text = textInput.value.trim();
+
     if (text === "") return;
 
-    books[index].comments.push({ name: "Anonym", comment: text });
-    input.value = "";
+    const name = localStorage.getItem(AUTHOR_KEY);     // key is a string
+    console.log(name);
+
+    let myUserComment = { name: name, comment: text };
+
+
+    books[index].comments.push(myUserComment);
+    localStorage.setItem("books", JSON.stringify(books));
+
+    document.getElementById("comments-" + index).innerHTML = isComment(books[index], index);
+    textInput.value = "";
 }
-
-btnSend.addEventListener("click", sendComment);
-
-commentInput.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") sendComment();
-})
