@@ -5,14 +5,14 @@ bookListRef.innerHTML = "";
 
 
 function init() {
-    initLikes();
+    //initLikes();
     renderAllBook();
 }
 
 const originalLikes = [{ likes: 1, liked: false }];
 
 function initLikes() {
-    for (let i = 0; i < books.length; i++) {  // save the original value once
+    for (let i = 0; i < books.length; i++) {
         books[i].liked = false;
         console.log(originalLikes[0].likes);
         let heart = document.getElementById("heart-liked-" + i);
@@ -51,11 +51,9 @@ function toggleLike(index) {
         heart.classList.replace("bi-heart", "bi-heart-fill");
     }
 
-    //counter.innerHTML = `<h3 id="card-book-likes-${index}">${books[index].likes}</h3>`
+
     counter.innerHTML = `${books[index].likes}`
         ;
-    console.log("conter:", books[index].liked, counter);
-    localStorage.setItem("counter", JSON.stringify(document.getElementById("heart-liked-" + index)));
-    localStorage.setItem("likes", JSON.stringify(document.getElementById("card-book-likes-" + index)));
+
 }
 
