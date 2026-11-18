@@ -48,7 +48,6 @@ function toggleLike(index) {
     let counter = document.getElementById("card-book-likes-" + index);
 
 
-
     heart.classList.replace("bi-heart-fill", "bi-heart");
     if ((!books[index].liked === false)) {
         books[index].liked = false;
