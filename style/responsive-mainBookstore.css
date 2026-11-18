@@ -8,50 +8,81 @@
   header {
     padding: 0px max(120px, calc(50% - 720px));
   }
-
-  .card-book-property {
-    max-width: 700px;
-    max-height: 700px;
-  }
-  .card-receveid-comment {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: space-around;
-    margin: 0 16px;
-  }
-
-  .card-receveid-comment {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: space-around;
-    margin: 0 16px;
-    transform: translateY(0px);
-  }
-
-  th {
+  /* th {
     width: 3rem;
     flex: 1;
-
-    transform: translateY(-10px);
   }
-
   td {
     width: 100%;
     flex: 1;
+  }*/
+  .card-book-send-comment {
+    display: flex;
+    flex-direction: row;
+    margin: 0 16px;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+  }
+  .input-text {
+    width: 80%;
   }
 }
 
-@media screen and (min-width: 320px) and (min-width: 649px) {
-  .content_header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media screen and (min-width: 320px) and (max-width: 649px) {
+  main {
+    padding: 0px max(24ssspx, calc(50% - 720px));
+    width: 320px;
   }
 
-  main {
-    padding: 0px max(50px, calc(50% - 720px));
+  .card-book-send-comment {
+    display: flex;
+    flex-direction: row;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: row;
+  }
+  .input-text {
+    width: 60%;
+  }
+  .h2,
+  h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .book-store-header > h3 {
+    font-size: 18px;
+  }
+  .h3,
+  h3 {
+    font-size: 1rem;
+  }
+
+  .bi::before,
+  [class*=" bi-"]::before,
+  [class^="bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: 150 !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .card-book-reference {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  .card-book-reference {
+    margin: 0;
+    transform: translateY(-150px);
   }
 }
 

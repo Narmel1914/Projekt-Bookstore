@@ -5,10 +5,15 @@ function readAvalaibleComment(obj) {
     let rows = "";
     for (let c = 0; c < obj.comments.length; c++) {
         rows +=   /*html*/ `
-        <tr id="result-${c}">
-            <th>[${obj.comments[c].name}]</th>
-            <td>: ${obj.comments[c].comment}</td>
-        </tr>`;
+        <table class="card-book-table-comment">
+             <thead>
+                <tr id="result-${c}">
+                    <th>[${obj.comments[c].name}]</th>
+                    <td>:${obj.comments[c].comment}</td>
+                </tr>
+             </thead>
+         </table>
+        `;
     }
     return rows
 }
@@ -57,15 +62,15 @@ function buildCard(obj, index) {
                         <thead>
                             <tr>
                                 <th class="book-author">Author</th>
-                                <td id="card-book-author">      :       ${obj.author}</td>
+                                <td id="card-book-author">:${obj.author}</td>
                             </tr>
                             <tr>
                                 <th class="book-publishedYear">Erscheinungsjahr</th>
-                                 <td id ="book-publishedYear">      :       ${obj.publishedYear}</td>
+                                 <td id ="book-publishedYear">:${obj.publishedYear}</td>
                             </tr>
                             <tr>
                                 <th class="book-genre">Genre:</th>
-                                <td id="card-book-genre">       :       ${obj.genre}</td>
+                                <td id="card-book-genre">:${obj.genre}</td>
                             </tr>
                         </thead>
                     </table>
@@ -77,9 +82,9 @@ function buildCard(obj, index) {
                     <div class="card-book-all-comment">
                         <div id="comments-${index}">
                             <div class="card-comment">
-                                <table>
-                                    ${isComment(obj, index)}
-                                </table>
+                             
+                               ${isComment(obj, index)}
+                                
                             </div>
                         </div>
                     </div>

@@ -151,6 +151,22 @@ img {
   margin: 0 16px;
   transform: translateY(-150px);
 }
+.card-book-reference {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.card-book-reference th {
+  width: 9rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.card-book-reference td {
+  width: auto;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
 .l3 {
   border: 1px solid #05eaf1;
   transform: translateY(-140px);
@@ -181,6 +197,22 @@ img {
   /*background-color: #06171e;*/
   transform: translateY(50px);
   margin: 0 16px;
+}
+.card-comment {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.card-comment th {
+  width: 9rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.card-comment td {
+  width: auto;
+  vertical-align: top;
+  overflow-wrap: anywhere;
 }
 
 .h4 {
