@@ -8,14 +8,7 @@
   header {
     padding: 0px max(120px, calc(50% - 720px));
   }
-  /* th {
-    width: 3rem;
-    flex: 1;
-  }
-  td {
-    width: 100%;
-    flex: 1;
-  }*/
+
   .card-book-send-comment {
     display: flex;
     flex-direction: row;
