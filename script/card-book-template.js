@@ -4,7 +4,7 @@ function readAvalaibleComment(obj) {
     }
     let rows = "";
     for (let c = 0; c < obj.comments.length; c++) {
-        rows += `
+        rows +=   /*html*/ `
         <tr id="result-${c}">
             <th>[${obj.comments[c].name}]</th>
             <td>: ${obj.comments[c].comment}</td>
@@ -25,7 +25,7 @@ function isComment(obj, index) {
 
 function buildCard(obj, index) {
 
-    return `
+    return /*html*/ `
     <div class="card-book">
          <div class="name-book">
             <h2 id="card-book-name">${obj.name}</h2>
@@ -71,26 +71,20 @@ function buildCard(obj, index) {
                     </table>
                 </div>
                 <hr class="l3"/>
-                <div class="card-receveid-comment">
-                    <h5 class="title-comment">Kommentare</h5>
+                <div class="card-receveid-comment"> 
+                    <div  class="title-comment"> <h5>Kommentare</h5></div>
+                    
                     <div class="card-book-all-comment">
-                        <div class="card-book-all-comment" id="comments-${index}">
-                            <p id="demo"></p>
-                          
-                            <table  class="card-comment">
-                             ${isComment(obj, index)}
-                            </table>
+                        <div id="comments-${index}">
+                            <div class="card-comment">
+                                <table>
+                                    ${isComment(obj, index)}
+                                </table>
+                            </div>
                         </div>
-                
-                        <div id="progress">
-                                <div class="progress-bar" id="progress-bar"role="progressbar"style="width: 0%">
-                                    25%
-                                </div>
-                        </div>
-                        
                     </div>
-              
-                    <div class="card-book-send-comment">
+                </div>
+                 <div class="card-book-send-comment">
                         <div class="input-group">
                             <input type="text" id="get-comment-${index}" class="input-text " 
                                 placeholder="Schreibe dein Kommentar ..." >
@@ -99,8 +93,7 @@ function buildCard(obj, index) {
                             </button>
                         </div> 
                     </div> 
-                    <div id="comment-box-${index}"></div>
-                </div>
+                    
             </div> 
         </div>`;
 }

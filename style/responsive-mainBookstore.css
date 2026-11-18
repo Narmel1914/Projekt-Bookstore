@@ -1,0 +1,58 @@
+@media screen and (min-width: 850px) and (max-width: 1920px) {
+  header {
+    padding: 0px max(120px, calc(50% - 720px));
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 849px) {
+  header {
+    padding: 0px max(120px, calc(50% - 720px));
+  }
+
+  .card-book-property {
+    max-width: 700px;
+    max-height: 700px;
+  }
+  .card-receveid-comment {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-around;
+    margin: 0 16px;
+  }
+
+  .card-receveid-comment {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-around;
+    margin: 0 16px;
+    transform: translateY(0px);
+  }
+
+  th {
+    width: 3rem;
+    flex: 1;
+
+    transform: translateY(-10px);
+  }
+
+  td {
+    width: 100%;
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 320px) and (min-width: 649px) {
+  .content_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    padding: 0px max(50px, calc(50% - 720px));
+  }
+}
+
+/*Mobil_view*/

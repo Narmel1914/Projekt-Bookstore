@@ -1,0 +1,26 @@
+.card-receveid-comment {
+  --sb-track-color: #06171e;
+  --sb-thumb-color: #05eaf1;
+  --sb-size: 8px;
+}
+
+.card-receveid-comment::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: 10px;
+}
+
+.card-receveid-comment::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 5px;
+}
+
+.card-receveid-comment::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 5px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}

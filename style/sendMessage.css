@@ -2,29 +2,20 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-content: start;
+  width: 100%;
+  margin: 0;
+  transform: translateY(-70px);
 }
 .input-text {
   background-color: #06171e;
   border-right: none;
   color: white;
-  width: 80%;
+  width: 90%;
   font-family: "Palanquin", sans-serif;
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-#progress {
-  display: flex;
-  width: 1%;
-  height: 16vh;
-  line-height: 0;
-  font-size: 0.75rem;
-  background-color: #06171e;
-
-  border-radius: 0.25rem;
-}
-#progress-bar {
-  color: #05eaf1;
-}
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
   background-color: #09212a;

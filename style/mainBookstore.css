@@ -3,8 +3,9 @@
 
 * {
   margin: 0;
-  padding: 0;
+
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -14,7 +15,7 @@ body {
 }
 body {
   min-height: 100vh;
-  background: #06171e;
+  background-color: #06171e;
   gap: 5px;
 }
 
@@ -61,7 +62,8 @@ span {
 }
 .l1 {
   border: 1px solid #05eaf1;
-  transform: translateY(-50px);
+  margin-top: 30px;
+  transform: translateY(-40px);
 }
 .l2 {
   border: 1px solid #05eaf1;
@@ -82,8 +84,6 @@ main {
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
-  /*background-color: var(--color-bg);
-  width: 100%;*/
   border-radius: 25px;
 }
 #bookstore {
@@ -92,17 +92,24 @@ main {
   justify-content: space-between;
   gap: 30px;
 }
+
+.title-comment {
+  display: flex;
+  transform: translateY(-3px);
+}
 .card-book {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   justify-items: center;
   justify-self: center;
-  height: 75%;
+  height: 90%;
   width: auto;
   background-color: #09212a;
   color: white;
   border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   gap: 45px;
 }
 .name-book {
@@ -111,7 +118,7 @@ main {
   align-content: center;
   align-items: center;
   justify-items: center;
-  transform: translateY(10px);
+  transform: translateY(15px);
 }
 
 .img-book {
@@ -120,7 +127,7 @@ main {
   margin: 0 16px;
   background-color: rgba(6, 23, 30, 0.5);
   border-radius: 25px;
-  transform: translateY(-80px);
+  transform: translateY(-63px);
 }
 img {
   max-width: 192px;
@@ -131,7 +138,6 @@ img {
 .card-book-property {
   display: flex;
   flex-direction: column;
-  /*margin: 0 16px;*/
 }
 .card-price-likes-counter {
   display: flex;
@@ -149,25 +155,32 @@ img {
   border: 1px solid #05eaf1;
   transform: translateY(-140px);
 }
-.card-receveid-comment {
-  display: flex;
-  flex-direction: column;
-  margin: 0 16px;
-  transform: translateY(-140px);
-}
+
 .card-book-all-comment {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 1px;
+  max-height: 100px;
+}
+.card-receveid-comment {
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+  margin: 0 16px;
+  transform: translateY(-120px);
 }
 
 .card-book-send-comment {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   /*background-color: #06171e;*/
-
-  transform: translateY(-5px);
+  transform: translateY(50px);
+  margin: 0 16px;
 }
 
 .h4 {
@@ -175,4 +188,34 @@ img {
 }
 .h3 {
   font-size: 1rem;
+  transform: translateY(-40px);
+}
+.h5 {
+  margin-bottom: 0rem;
+}
+
+.card-book-all-comment {
+  --sb-track-color: #06171e;
+  --sb-thumb-color: #05eaf1;
+  --sb-size: 8px;
+}
+
+.card-book-all-comment::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.card-book-all-comment::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 5px;
+}
+
+.card-book-all-comment::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 5px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }

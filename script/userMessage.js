@@ -31,5 +31,6 @@ function getTextFomInput(index) {
     localStorage.setItem("books", JSON.stringify(books));
 
     document.getElementById("comments-" + index).innerHTML = isComment(books[index], index);
+    updateProgress(index);
     textInput.value = "";
 }
