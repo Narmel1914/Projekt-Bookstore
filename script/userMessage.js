@@ -1,5 +1,5 @@
 
-// save the author name once (only if it does not exist yet)
+// save the author name once
 
 const AUTHOR_KEY = "Author";
 

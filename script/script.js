@@ -1,10 +1,10 @@
 /*
 JAVASCRIPT als Programmierunsprach
-Projekttitel: Bookstor
+Projekttitel: Bookstore
 Datum : 16 bis 19:11:2026
-Durchgeführt von: 
+Durchgeführt von: ARMEL NYA 
 Ziel des Projekts
-Beobachtung
+Beobachtung: Mentor Developper Akademie
 */
 
 function init() {

@@ -58,6 +58,7 @@
   }
   main {
     width: 100%;
+    justify-content: center;
   }
   .card-book {
     width: 300px;
@@ -145,6 +146,11 @@
   .card-book-reference td {
     font-size: 1rem;
   }
+  .card-comment {
+    width: 260px;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
   .card-comment th {
     font-size: 1rem;
   }
@@ -184,6 +190,7 @@
     justify-content: space-between;
     align-content: space-between;
     width: 90%;
+    transform: translateY(-30px);
   }
 
   .logo-und-titel {
@@ -257,10 +264,21 @@
   .card-book-reference td {
     font-size: 1rem;
   }
+  .card-comment {
+    width: 200px;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
   .card-comment th {
     font-size: 1rem;
+    height: 20px;
   }
   .card-comment td {
-    font-size: 1rem;
+    font-size: 16px;
+    overflow-wrap: anywhere;
+  }
+  .card-book-all-comment {
+    max-width: 200px;
+    max-height: 100px;
   }
 }
