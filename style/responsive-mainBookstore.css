@@ -1,19 +1,24 @@
 @media screen and (min-width: 850px) and (max-width: 1920px) {
-  header {
+  /*header {
     padding: 0px max(120px, calc(50% - 720px));
-  }
+  }*/
   .card-book-reference {
     width: 80%;
   }
   .book-store-header > h3 {
     font-size: 20px;
   }
+  .card-book-reference {
+    width: 80%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
 }
 
 @media screen and (min-width: 650px) and (max-width: 849px) {
-  header {
+  /*header {
     padding: 0px max(120px, calc(50% - 720px));
-  }
+  }*/
   .card-book-reference {
     width: 40%;
   }
