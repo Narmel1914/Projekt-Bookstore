@@ -24,12 +24,16 @@ header {
   display: flex;
   align-items: center;
   background-color: #09212a;
+  width: 100%;
 }
 
 .logo-und-titel {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 16px;
 }
 
 .h2,
@@ -189,15 +193,14 @@ img {
   margin: 0 16px;
   transform: translateY(-120px);
 }
-
+/*
 .card-book-send-comment {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /*background-color: #06171e;*/
   transform: translateY(50px);
   margin: 0 16px;
-}
+}*/
 .card-comment {
   width: 100%;
   table-layout: fixed;

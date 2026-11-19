@@ -2,13 +2,28 @@
   header {
     padding: 0px max(120px, calc(50% - 720px));
   }
+  .card-book-reference {
+    width: 80%;
+  }
+  .book-store-header > h3 {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 650px) and (max-width: 849px) {
   header {
     padding: 0px max(120px, calc(50% - 720px));
   }
-
+  .card-book-reference {
+    width: 40%;
+  }
+  .book-store-header > h3 {
+    font-size: 20px;
+  }
+  .h2,
+  h2 {
+    font-size: 24px;
+  }
   .card-book-send-comment {
     display: flex;
     flex-direction: row;
@@ -22,21 +37,50 @@
   .input-text {
     width: 80%;
   }
+  .logo-und-titel {
+    width: 80%;
+  }
 }
 
-@media screen and (min-width: 320px) and (max-width: 649px) {
+@media screen and (min-width: 520px) and (max-width: 649px) {
+  body {
+    width: 520px;
+  }
+  html {
+    width: 100%;
+    display: flex;
+  }
+  header {
+    display: flex;
+    width: 100%;
+    background-color: #09212a;
+    justify-items: left;
+  }
   main {
-    padding: 0px max(24ssspx, calc(50% - 720px));
-    width: 320px;
+    width: 100%;
+  }
+  .card-book {
+    width: 300px;
+  }
+  #bookstore {
+    width: 300px;
+    margin-bottom: 1rem;
   }
 
-  .card-book-send-comment {
-    display: flex;
-    flex-direction: row;
-  }
   .input-group {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    width: 130%;
+  }
+
+  .logo-und-titel {
+    margin: 0;
+    justify-items: left;
+  }
+  .book-store-header {
+    display: flex;
+    justify-items: left;
   }
   .input-text {
     width: 60%;
@@ -48,6 +92,8 @@
   }
   .book-store-header > h3 {
     font-size: 18px;
+    width: 260px;
+    justify-items: left;
   }
   .h3,
   h3 {
@@ -69,12 +115,152 @@
     -moz-osx-font-smoothing: grayscale;
   }
   .card-book-reference {
-    width: 100%;
+    width: 260px;
     table-layout: fixed;
     border-collapse: collapse;
   }
   .card-book-reference {
+    margin: 0 8px;
+  }
+  .card-price-likes-counter {
+    margin-left: 8px;
+    justify-content: space-between;
+  }
+  .card-likes-counter {
+    gap: 5px;
+  }
+  .img-book {
+    margin: 0 16px;
+  }
+  #card-book-img {
+    width: 280px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0 8px;
+  }
+  .card-book-reference th {
+    font-size: 1rem;
+  }
+  .card-book-reference td {
+    font-size: 1rem;
+  }
+  .card-comment th {
+    font-size: 1rem;
+  }
+  .card-comment td {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 519px) {
+  body {
+    width: 320px;
+  }
+  html {
+    width: 100%;
+    display: flex;
+  }
+  header {
+    width: 100%;
+  }
+  main {
+    width: 70%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+  .card-book {
+    width: 300px;
+  }
+  #bookstore {
+    width: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 90%;
+  }
+
+  .logo-und-titel {
     margin: 0;
-    transform: translateY(-150px);
+    justify-items: left;
+  }
+  .book-store-header {
+    display: flex;
+    justify-items: left;
+  }
+  .input-text {
+    width: 80%;
+  }
+  .h2,
+  h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .book-store-header > h3 {
+    font-size: 16px;
+    width: 250px;
+    justify-items: left;
+  }
+  .h3,
+  h3 {
+    font-size: 1rem;
+  }
+
+  .bi::before,
+  [class*=" bi-"]::before,
+  [class^="bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: 150 !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .card-book-reference {
+    width: 260px;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  .card-book-reference {
+    margin: 0 8px;
+  }
+  .card-price-likes-counter {
+    margin-left: 8px;
+    justify-content: space-between;
+  }
+  .card-likes-counter {
+    gap: 5px;
+  }
+  .img-book {
+    margin: 0 16px;
+  }
+  #card-book-img {
+    width: 280px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0 8px;
+  }
+  .card-book-reference th {
+    font-size: 1rem;
+  }
+  .card-book-reference td {
+    font-size: 1rem;
+  }
+  .card-comment th {
+    font-size: 1rem;
+  }
+  .card-comment td {
+    font-size: 1rem;
   }
 }

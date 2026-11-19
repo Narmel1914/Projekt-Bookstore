@@ -3,8 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-content: start;
-  width: 100%;
-  margin: 0;
+  width: 98%;
+  margin: 0 12px;
 
   transform: translateY(-70px);
 }
@@ -12,7 +12,7 @@
   background-color: #06171e;
   border-right: none;
   color: white;
-  width: 90%;
+  width: 80%;
   font-family: "Palanquin", sans-serif;
   margin-bottom: 5px;
 }
