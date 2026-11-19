@@ -1,7 +1,11 @@
-
-
-
-
+/*
+JAVASCRIPT als Programmierunsprach
+Projekttitel: Bookstor
+Datum : 16 bis 19:11:2026
+Durchgeführt von: 
+Ziel des Projekts
+Beobachtung
+*/
 
 function init() {
 

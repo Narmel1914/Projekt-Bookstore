@@ -21,7 +21,7 @@ function getTextFomInput(index) {
 
     if (text === "") return;
 
-    const name = localStorage.getItem(AUTHOR_KEY); // key is a string
+    const name = localStorage.getItem(AUTHOR_KEY);
 
 
     let myUserComment = { name: name, comment: text };

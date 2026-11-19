@@ -1,8 +1,11 @@
 function readAvalaibleComment(obj) {
+
     if (obj.comments.length === 0) {
         return `<p class="NOT-COMMENT">Noch keine Kommentare</p>`;
     }
+
     let rows = "";
+
     for (let c = 0; c < obj.comments.length; c++) {
         rows +=   /*html*/ `
         <table class="card-book-table-comment">
@@ -15,6 +18,7 @@ function readAvalaibleComment(obj) {
          </table>
         `;
     }
+
     return rows
 }
 
@@ -25,7 +29,6 @@ function isComment(obj, index) {
         <tbody id="rowsColumn-${index}">${readAvalaibleComment(obj)}</tbody>
     </table>`;
 }
-
 
 
 function buildCard(obj, index) {
