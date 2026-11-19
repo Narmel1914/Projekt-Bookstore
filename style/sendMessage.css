@@ -1,12 +1,12 @@
 .input-group {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-content: start;
   width: 98%;
   margin: 0 12px;
 
-  transform: translateY(-70px);
+  transform: translateY(-40px);
 }
 .input-text {
   background-color: #06171e;

@@ -1,33 +1,41 @@
-function readAvalaibleComment(obj) {
 
-    if (obj.comments.length === 0) {
-        return `<p class="NOT-COMMENT">Noch keine Kommentare</p>`;
-    }
-
-    let rows = "";
-
-    for (let c = 0; c < obj.comments.length; c++) {
-        rows +=   /*html*/ `
-        <table class="card-book-table-comment">
-             <thead>
-                <tr id="result-${c}">
-                    <th>[${obj.comments[c].name}]</th>
-                    <td>:${obj.comments[c].comment}</td>
-                </tr>
-             </thead>
-         </table>
-        `;
-    }
-
-    return rows
+function getCommentRowTemplate(comment) {
+    return /*html*/ `
+    <tr>
+        <th>[${comment.name}]</th>
+        <td>: ${comment.comment}</td>
+    </tr>`;
 }
 
 
-function isComment(obj, index) {
-    return `
-    <table class="card-comment">
-        <tbody id="rowsColumn-${index}">${readAvalaibleComment(obj)}</tbody>
+function getCommentsTableTemplate(rows, index) {
+    return  /*html*/`
+    <table class="card-book-table-comment" id="result-${index}">
+        <tbody>${rows}</tbody>
     </table>`;
+}
+
+
+function getNoCommentTemplate() {
+    return /*html*/ `<p class="NOT-COMMENT"></p>`;
+}
+
+
+function renderComments(obj, index) {
+    let rows = "";
+    // decision: no comments -> message
+    if (obj.comments.length === 0) {
+        return getNoCommentTemplate();
+    }
+
+    else {
+
+        for (let c = 0; c < obj.comments.length; c++) {
+            rows += getCommentRowTemplate(obj.comments[c]);
+        }
+    }
+
+    return getCommentsTableTemplate(rows, index);
 }
 
 
@@ -94,7 +102,7 @@ function buildCard(obj, index) {
                         <div id="comments-${index}">
                             <div class="card-comment">
                              
-                               ${isComment(obj, index)}
+                               ${renderComments(obj, index)}
                                 
                             </div>
                         </div>

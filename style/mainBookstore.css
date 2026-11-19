@@ -24,7 +24,7 @@ header {
   display: flex;
   align-items: center;
   background-color: #09212a;
-  width: 100%;
+  width: auto;
 }
 
 .logo-und-titel {
@@ -38,7 +38,7 @@ header {
 
 .h2,
 h2 {
-  font-size: 28px;
+  font-size: 16px;
   display: flex;
   align-self: center;
   justify-self: center;
@@ -83,8 +83,8 @@ main {
   justify-content: center;
 }
 .main-store {
-  padding: 16px max(0px, calc(50% - 720px));
-  /* margin: 16px max(0px, calc(50% - 720px));*/
+  /* padding: 16px max(0px, calc(50% - 720px));
+  margin: 16px max(0px, calc(50% - 720px));*/
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
@@ -92,9 +92,9 @@ main {
 }
 #bookstore {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 30px;
+  /*flex-direction: column;*/
+  flex-direction: row;
+  gap: 10px;
 }
 
 .title-comment {
@@ -104,11 +104,11 @@ main {
 .card-book {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   justify-items: center;
   justify-self: center;
-  height: 90%;
-  width: auto;
+  height: 750px;
+  width: 300px;
   background-color: #09212a;
   color: white;
   border-radius: 20px;
@@ -128,14 +128,15 @@ main {
 .img-book {
   display: flex;
   justify-content: center;
+  align-content: center;
   margin: 0 16px;
   background-color: rgba(6, 23, 30, 0.5);
   border-radius: 25px;
   transform: translateY(-63px);
 }
 img {
-  max-width: 192px;
-  max-height: 192px;
+  max-width: 150px;
+  max-height: 150px;
   border-radius: 3px;
   opacity: 0.8;
 }
@@ -184,7 +185,6 @@ img {
   max-height: 100px;
 }
 .card-receveid-comment {
-  max-height: 300px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -193,46 +193,45 @@ img {
   margin: 0 16px;
   transform: translateY(-120px);
 }
-/*
-.card-book-send-comment {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  transform: translateY(50px);
-  margin: 0 16px;
-}*/
+
 .card-comment {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
 }
-.card-comment th {
-  width: 9rem;
+.card-book-table-comment th {
+  width: 5rem;
   text-align: left;
   vertical-align: top;
 }
 
-.card-comment td {
+.card-book-table-comment td {
   width: auto;
   vertical-align: top;
   overflow-wrap: anywhere;
 }
 
-.h4 {
+.h4,
+h4 {
   font-size: 1rem;
 }
-.h3 {
+
+.h3,
+h3 {
   font-size: 1rem;
-  transform: translateY(-40px);
 }
-.h5 {
-  margin-bottom: 0rem;
+
+.h5,
+h5 {
+  font-size: 1rem;
+
+  margin-bottom: 1rem;
 }
 
 .card-book-all-comment {
   --sb-track-color: #06171e;
   --sb-thumb-color: #05eaf1;
-  --sb-size: 8px;
+  --sb-size: 32px;
 }
 
 .card-book-all-comment::-webkit-scrollbar {

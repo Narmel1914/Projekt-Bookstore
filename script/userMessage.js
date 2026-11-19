@@ -28,9 +28,10 @@ function getTextFomInput(index) {
 
 
     books[index].comments.push(myUserComment);
-    //localStorage.setItem("books", JSON.stringify(books));
+    /*localStorage.setItem("books", JSON.stringify(books));*/
 
-    document.getElementById("comments-" + index).innerHTML = isComment(books[index], index);
+    document.getElementById("comments-" + index).innerHTML = renderComments(books[index], index);
     updateProgress(index);
     textInput.value = "";
 }
+

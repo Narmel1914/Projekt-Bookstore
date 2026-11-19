@@ -11,6 +11,7 @@ function init() {
 
     renderAllBook();
     initLikes();
+
 }
 
 
@@ -35,11 +36,11 @@ function initLikes() {
 function renderAllBook() {
     let bookListRef = document.getElementById("bookstore");
     bookListRef.innerHTML = "";
+
     for (let i = 0; i < books.length; i++) {
         bookListRef.innerHTML += buildCard(books[i], i);
     }
 
-    /* Call Progress Script*/
     for (let i = 0; i < books.length; i++) {
         updateProgress(i);
     }

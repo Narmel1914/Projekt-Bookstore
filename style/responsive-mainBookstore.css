@@ -1,289 +1,55 @@
 @media screen and (min-width: 850px) and (max-width: 1920px) {
-  /*header {
-    padding: 0px max(120px, calc(50% - 720px));
-  }*/
+  .main-store {
+    flex-wrap: wrap;
+  }
   .card-book-reference {
     width: 80%;
   }
   .book-store-header > h3 {
-    font-size: 20px;
+    font-size: 24px;
   }
   .card-book-reference {
     width: 80%;
     table-layout: fixed;
     border-collapse: collapse;
+  }
+  #bookstore {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 650px) and (max-width: 849px) {
-  /*header {
-    padding: 0px max(120px, calc(50% - 720px));
-  }*/
-  .card-book-reference {
-    width: 40%;
-  }
-  .book-store-header > h3 {
-    font-size: 20px;
-  }
-  .h2,
-  h2 {
-    font-size: 24px;
-  }
-  .card-book-send-comment {
+  #bookstore {
     display: flex;
-    flex-direction: row;
-    margin: 0 16px;
-  }
-  .input-group {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-  }
-  .input-text {
-    width: 80%;
-  }
-  .logo-und-titel {
-    width: 80%;
+    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 520px) and (max-width: 649px) {
-  body {
-    width: 520px;
-  }
-  html {
-    width: 100%;
-    display: flex;
-  }
-  header {
-    display: flex;
-    width: 100%;
-    background-color: #09212a;
-    justify-items: left;
-  }
-  main {
-    width: 100%;
-    justify-content: center;
-  }
-  .card-book {
-    width: 300px;
-  }
   #bookstore {
-    width: 300px;
-    margin-bottom: 1rem;
-  }
-
-  .input-group {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 130%;
-  }
-
-  .logo-und-titel {
-    margin: 0;
-    justify-items: left;
-  }
-  .book-store-header {
-    display: flex;
-    justify-items: left;
-  }
-  .input-text {
-    width: 60%;
-  }
-  .h2,
-  h2 {
-    font-size: 16px;
-    text-align: center;
-  }
-  .book-store-header > h3 {
-    font-size: 18px;
-    width: 260px;
-    justify-items: left;
-  }
-  .h3,
-  h3 {
-    font-size: 1rem;
-  }
-
-  .bi::before,
-  [class*=" bi-"]::before,
-  [class^="bi-"]::before {
-    display: inline-block;
-    font-family: bootstrap-icons !important;
-    font-style: normal;
-    font-weight: 150 !important;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: -0.125em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .card-book-reference {
-    width: 260px;
-    table-layout: fixed;
-    border-collapse: collapse;
-  }
-  .card-book-reference {
-    margin: 0 8px;
-  }
-  .card-price-likes-counter {
-    margin-left: 8px;
-    justify-content: space-between;
-  }
-  .card-likes-counter {
-    gap: 5px;
-  }
-  .img-book {
-    margin: 0 16px;
-  }
-  #card-book-img {
-    width: 280px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin: 0 8px;
-  }
-  .card-book-reference th {
-    font-size: 1rem;
-  }
-  .card-book-reference td {
-    font-size: 1rem;
-  }
-  .card-comment {
-    width: 260px;
-    table-layout: fixed;
-    border-collapse: collapse;
-  }
-  .card-comment th {
-    font-size: 1rem;
-  }
-  .card-comment td {
-    font-size: 1rem;
+    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 519px) {
-  body {
-    width: 320px;
-  }
-  html {
-    width: 100%;
-    display: flex;
-  }
-  header {
-    width: 100%;
-  }
-  main {
-    width: 70%;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-  }
-  .card-book {
-    width: 300px;
-  }
   #bookstore {
-    width: 300px;
-    margin-bottom: 1rem;
-  }
-
-  .input-group {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: space-between;
-    width: 90%;
-    transform: translateY(-30px);
-  }
-
-  .logo-und-titel {
-    margin: 0;
-    justify-items: left;
-  }
-  .book-store-header {
-    display: flex;
-    justify-items: left;
-  }
-  .input-text {
-    width: 80%;
-  }
-  .h2,
-  h2 {
-    font-size: 16px;
-    text-align: center;
+    flex-direction: column;
   }
   .book-store-header > h3 {
     font-size: 16px;
-    width: 250px;
-    justify-items: left;
-  }
-  .h3,
-  h3 {
-    font-size: 1rem;
   }
 
-  .bi::before,
-  [class*=" bi-"]::before,
-  [class^="bi-"]::before {
-    display: inline-block;
-    font-family: bootstrap-icons !important;
-    font-style: normal;
-    font-weight: 150 !important;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: -0.125em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .card-book-reference {
-    width: 260px;
-    table-layout: fixed;
-    border-collapse: collapse;
-  }
-  .card-book-reference {
-    margin: 0 8px;
-  }
-  .card-price-likes-counter {
-    margin-left: 8px;
-    justify-content: space-between;
-  }
-  .card-likes-counter {
-    gap: 5px;
-  }
-  .img-book {
+  .input-group {
+    width: 95%;
     margin: 0 16px;
   }
-  #card-book-img {
-    width: 280px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin: 0 8px;
-  }
-  .card-book-reference th {
-    font-size: 1rem;
-  }
-  .card-book-reference td {
-    font-size: 1rem;
-  }
-  .card-comment {
-    width: 200px;
+
+  .card-book-reference {
+    width: 90%;
     table-layout: fixed;
     border-collapse: collapse;
-  }
-  .card-comment th {
-    font-size: 1rem;
-    height: 20px;
-  }
-  .card-comment td {
-    font-size: 16px;
-    overflow-wrap: anywhere;
-  }
-  .card-book-all-comment {
-    max-width: 200px;
-    max-height: 100px;
   }
 }
