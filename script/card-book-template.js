@@ -38,11 +38,17 @@ function buildCard(obj, index) {
          <div class="name-book">
             <h2 id="card-book-name">${obj.name}</h2>
         </div>
+
         <hr class="l1"/>
+
         <div id="card-book-img" class="img-book">
-        <img src="https://images.stockcake.com/public/d/1/c/d1c4811d-c402-4e3c-9fa7-268e7a285bf1_medium/vintage-books-stacked-stockcake.jpg" alt="book"></div>
-          <hr class="l2"/>
+            <img src="https://images.stockcake.com/public/d/1/c/d1c4811d-c402-4e3c-9fa7-268e7a285bf1_medium/vintage-books-stacked-stockcake.jpg" alt="book">
+        </div>
+
+        <hr class="l2"/>
+
         <div class="card-book-property">
+
               <div class="card-price-likes-counter">
                     <div class="book-price text-danger">
                     <h3 id="card-book-name">${obj.price.toFixed(2).replace(".", ",")} \u20AC</h3>
@@ -78,7 +84,9 @@ function buildCard(obj, index) {
                         </thead>
                     </table>
                 </div>
+
                 <hr class="l3"/>
+
                 <div class="card-receveid-comment"> 
                     <div  class="title-comment"> <h5>Kommentare</h5></div>
                     
@@ -92,7 +100,8 @@ function buildCard(obj, index) {
                         </div>
                     </div>
                 </div>
-                 <div class="card-book-send-comment">
+
+                <div class="card-book-send-comment">
                         <div class="input-group">
                             <input type="text" id="get-comment-${index}" class="input-text " 
                                 placeholder="Schreibe dein Kommentar ..." >
@@ -100,10 +109,11 @@ function buildCard(obj, index) {
                                 <i class="bi bi-send"></i>
                             </button>
                         </div> 
-                    </div> 
+                </div> 
                     
             </div> 
-        </div>`;
+        </div>
+    `;
 }
 
 
